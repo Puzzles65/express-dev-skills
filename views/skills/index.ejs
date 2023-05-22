@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skill List</title>
+</head>
+<body>
+  <h1>Skill List</h1>
+  
+  <% if (skills.length > 0) { %>
+    <ul>
+      <% skills.forEach(function(skill) { %>
+        <li>
+          <a href="/skills/<%= skill.id %>">
+            <%= skill.name %>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  <% } else { %>
+    <p>No skills found.</p>
+  <% } %>
+</body>
+</html>
